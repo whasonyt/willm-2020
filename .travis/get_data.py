@@ -7,7 +7,7 @@ import simplejson
 
 
 def youtube_videos():
-    YOUTUBE_API_URL = 'https://www.googleapis.com/youtube/v3/search?order=date&maxResults=10&part=snippet&channelId=UCA3QtGSDbBoS5ogCitr_KQw&key=' + os.environ.get('YOUTUBE_API_KEY')
+    YOUTUBE_API_URL = 'https://www.googleapis.com/youtube/v3/search?order=date&maxResults=12&part=snippet&channelId=UCA3QtGSDbBoS5ogCitr_KQw&key=' + os.environ.get('YOUTUBE_API_KEY')
     response = req.get(YOUTUBE_API_URL)
     jsdata = simplejson.loads(response.text)
     data = {}
