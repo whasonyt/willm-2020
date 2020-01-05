@@ -1,16 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="https://www.google.com/recaptcha/api.js?render=6Le1lMwUAAAAAAXXQGL2kXUrfjxj0PIo3Dg2_aNN&onload=initRecaptcha&render=explicit"></script>
-<script type="text/javascript">
-  var initRecaptcha = function() {
-    grecaptcha.ready(function() {
-      grecaptcha.execute("6Le1lMwUAAAAAAXXQGL2kXUrfjxj0PIo3Dg2_aNN", {action: "homepage"}).then(function(token) {
-        document.getElementById('recaptcha_token').value = token;
-      });
-    });
-  }
-</script>
+
   <link rel="icon" href="mr_quackers.png">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -58,10 +49,6 @@
                   
                   </div>
                 </div>
-                <div class="controlled">
-                    <input type="hidden" id="recaptcha_token" name="recaptcha_token"></input>
-  <input type="hidden" name="action" value="validate_captcha"></input>
-            </div>
                 <div class="field">
                   <div class="control has-text-centered">
                    <button class="button is-primary clear" type="reset">Clear Form</button> <button class="button is-primary sub" type="submit">Send Message</button>
