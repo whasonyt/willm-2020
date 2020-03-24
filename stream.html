@@ -1,77 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script>
-const VIDEO_ID = "FmBKyrWXb-I"; // for live chat
-let chat_embed_wrapper = document.getElementById("chat-embed-wrapper");  
-let chat_embed_iframe = document.createElement("iframe");  
-chat_embed_iframe.referrerPolicy = "origin";  
-chat_embed_iframe.src = "https://www.youtube.com/live_chat?v=" + VIDEO_ID + "&embed_domain=" + window.location.hostname;  
-chat_embed_iframe.frameBorder = "0";  
-chat_embed_iframe.id = "chat-embed-iframe";  
-chat_embed_iframe.style.height = "100%";
-chat_embed_iframe.style.width = "100%";
-chat_embed_wrapper.appendChild(chat_embed_iframe);
-
-let change_stream_embed_iframe_size = function(){
-  let stream_container = document.getElementById("stream-container");
-  let stream_embed_wrapper = document.getElementById("stream-embed-wrapper");
-  let stream_embed_iframe = document.getElementById("stream-embed-iframe");
-  
-  if(typeof window.orientation !== 'undefined'){ //on phone
-    chat_embed_wrapper.style.display = 'none';
-    stream_embed_iframe.width = stream_container.clientWidth;
-  }else{ // on pc (desktop browsers == 'undefined')
-    stream_embed_iframe.width = stream_embed_wrapper.clientWidth;
-  }
-};
-change_stream_embed_iframe_size();
-
-window.onresize = function(event) {
-  //console.log("[window.onresize]");
-  change_stream_embed_iframe_size();
-};
-</script>
   <link rel="icon" href="mr_quackers.png">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Stream | Will M</title>
   <link rel="stylesheet" href="assets/css/font-awesome.min.css"  />
-  <link rel="stylesheet" href="assets/css/stream-page.css"  />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <!-- Bulma Version 0.6.0 -->
   <link rel="stylesheet" href="assets/css/bulma.min.css" />
-  <style type="text/css">
-    html,body {
-      font-family: 'Open Sans';
-    }
-
-  </style>
+  <link href="https://cdn.jsdelivr.net/npm/video.js@7.5.0/dist/video-js.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/videojs-resolution-switcher-beta@0.4.3/lib/videojs-resolution-switcher.css" rel="stylesheet">
 </head>
 <body>
   <div class="hero-head" id="navbar-container">
 
   </div>
   <section class="section is-fullheight is-default is-bold ">
-
 <div class="container is-fluid">
-<div id="stream-container">
-  <!-- stream -->
-  <div id="stream-embed-wrapper">
-    <iframe id="stream-embed-iframe" width="560" height="100%" src="https://www.youtube.com/embed/live_stream?channel=UCA3QtGSDbBoS5ogCitr_KQw" frameborder="0" allowfullscreen></iframe>
-  </div>
 
-  <!-- chat 
-  <div id="chat-embed-wrapper"></div> -->
+  <script src="https://cdn.jsdelivr.net/combine/npm/video.js@7.5/dist/video.min.js,npm/videojs-youtube@2.6/dist/Youtube.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/videojs-resolution-switcher-beta@0.4.3/lib/videojs-resolution-switcher.min.js"></script>
   
- 
-  <div class="clear_both"></div>
-</div>
-<div id="links"
-<br>
-<p style="text-align: center"><a href="https://streamlabs.com/willhasawesomeshoes/tip">Support the Stream</a> | <a href="https://www.youtube.com/WillHasAwesomeShoes/live">View on YouTube</a> | <a href="https://linktr.ee/willymuffin">Social Media Links</a></p>
-</div>
+  <video id='video' class="video-js vjs-default-skin"></video>
+
+<script src="https://cdn.jsdelivr.net/combine/npm/video.js@7.5/dist/video.min.js,npm/videojs-youtube@2.6/dist/Youtube.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/videojs-resolution-switcher-beta@0.4.3/lib/videojs-resolution-switcher.min.js"></script>
+
+<script>
+videojs('video', {
+	controls: true,
+	muted: false,
+	techOrder:  ["youtube"],
+	width: 800,
+    autoplay: false,
+	sources: [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=FmBKyrWXb-I"}],
+	plugins: {
+		videoJsResolutionSwitcher: {
+			default: 'low',
+			dynamicLabel: true
+		}
+	}
+}, function(){
+	var player = this;
+	window.player = player;
+	player.on('resolutionchange', function(){
+		console.info('Source changed')
+	})
+    });
+</script>
 </div>
 
   </section>
