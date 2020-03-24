@@ -1,0 +1,56 @@
+:root {
+  --container-width: 900px;
+  --container-bg-color: #000;
+  
+  --stream-container-width: 900px; /* 100% or 900px */
+  
+  --chat-height: 320px;
+  --chat-width: 300px;
+}
+body { font-family: "Microsoft JhengHei", Arial, 'LiHei Pro', Helvetica, sans-serif;}
+div {
+  box-sizing: border-box;
+}
+
+#header h1 {
+  margin: 0;
+  padding: 0;
+}
+
+#stream-container {
+  background-color: var(--container-bg-color);
+  min-height: var(--chat-height);
+  width: var(--stream-container-width);
+  max-width: 100%;
+  margin: 0 auto;
+}
+#stream-embed-iframe {
+  height: 100%;
+  max-height: 100vh;
+}
+#stream-embed-wrapper {
+  float: left;
+  height: var(--chat-height);
+  width: calc( 100% - var(--chat-width) );
+}
+
+#chat-embed-wrapper {
+  float: right;
+  height: var(--chat-height);
+  width: var(--chat-width);
+}
+
+@media (max-width: 600px) {
+  #stream-embed-wrapper {
+    float: none;
+    width: 100%;
+  }
+  #chat-embed-wrapper {
+    float: none;
+    width: 100%;
+  }
+}
+
+.clear_both {
+  clear: both;
+}
