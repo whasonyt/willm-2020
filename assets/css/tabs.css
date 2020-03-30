@@ -34,7 +34,7 @@
 }
  .accordion label .tab-title {
 	 display: block;
-	 padding: 20px;
+	 padding: 10px;
 	 border-radius: 3px 3px 0 0;
 }
  .accordion label .tab-title:hover {
