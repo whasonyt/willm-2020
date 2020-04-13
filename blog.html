@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="mr_quackers.png">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog | Will M</title>
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css"  />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <!-- Bulma Version 0.6.0 -->
+  <link rel="stylesheet" href="assets/css/bulma.min.css" />
+  <style type="text/css">
+    html,body {
+      font-family: 'Open Sans';
+    }
+
+  </style>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.js"></script>
+
+<script type="text/javascript">
+
+  $(function () {
+    var $content = $('#prita-medium-content');
+    var data = {
+      rss_url: 'https://medium.com/feed/@willmccrudden'
+    };
+    $.get('https://api.rss2json.com/v1/api.json', data, function (response) {
+      if (response.status == 'ok') {
+        var output = '';
+          $.each(response.items, function (k, item) {
+            
+            output += '<div class="medium-blog-post" onclick="window.open(\'' + item.guid + '\',\'mywindow\');">'
+            output += '<div class="medium-blog-title"><h3>' + item.title + '</h3></div>';             
+            output += '<div class="medium-blog-date">' + $.format.date(item.pubDate, "MMMM dd, yyyy") + '</div>';
+            output += '</div>';
+            
+            return k < 4;
+          });
+        $content.html(output).hide();
+        $content.fadeIn('slow');
+      }
+    });
+  });
+</script>
+  <style>
+.button {
+  background-color: #2C2F33;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+    
+body {font-family: 'Open Sans';}
+  .medium-blog-post {
+    display: table;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in, transform 0.2s ease-in;
+    margin-bottom: 7px;
+  }
+
+  .medium-blog-title {
+    display: table-cell;
+        background-color: #37536A;
+    color: #FFFFFF;
+
+    padding: 0px 10px;
+  }
+
+  .medium-blog-title h2 {
+    margin: 0;
+  }
+
+  .medium-blog-date {
+    position: relative;
+    display: table-cell;
+    color: #FFFFFF;
+    background-color: #7289DA; /*vibblue*/
+    height: 100%;
+    margin-top: 0px;
+    padding: 10px;
+  }
+
+  .medium-blog-post:hover {
+    background-color: #7289DA; /*vibblue*/
+    transform: scale(1.02);
+  }
+</style>
+
+</head>
+<body>
+  <div class="hero-head" id="navbar-container">
+
+  </div>
+  <section class="section is-fullheight is-default is-bold ">
+
+<div class="container is-fluid">
+  <center>
+    <h1 class="title">Medium Articles</h1>
+<p>This list is automatically updated each time I publish a new story on <a href="//medium.com/@willmccrudden">Medium</a>.</p>
+  </center>
+
+      <center>
+<div id="prita-medium-content"></div>
+  
+<br>
+<a href="//medium.com/@willmccrudden" class="button">View More on Medium</a>
+
+</center>
+
+      </div>
+</div>
+
+  </section>
+  <div class="hero-foot" id="footer-container">
+
+  </div>
+  <script src="assets/js/jquery-3.2.1.min.js" charset="utf-8"></script>
+  <script src="assets/js/bulma.js" charset="utf-8"></script>
+  <script src="assets/js/main.js" charset="utf-8"></script>
+  <script src="assets/js/videos.js" charset="utf-8"></script>
+</body>
+</html>
