@@ -20,7 +20,7 @@
         var output = '';
           $.each(response.items, function (k, item) {
             
-            output += '<div class="medium-blog-post" onclick="window.open(\'' + item.guid + '\',\'mywindow\');">'
+            output += '<img style="width: 200px; border-radius: 10px" src="' + item.thumbnail + '"></img><br> <div class="medium-blog-post" onclick="window.open(\'' + item.guid + '\',\'mywindow\');">'
             output += '<div class="medium-blog-title"><h3>' + item.title + '</h3></div>';             
             output += '<div class="medium-blog-date">' + $.format.date(item.pubDate, "MMMM dd, yyyy") + '</div>';
             output += '</div>';
@@ -88,6 +88,6 @@ body {font-family: 'Open Sans';  margin: auto;}
 <center>
 <div id="prita-medium-content"></div>
   <br>
-<a href="//medium.com/@willmccrudden" class="button">View More on Medium</a>
+<a href="//medium.com/@willmccrudden" class="button">View All on Medium</a>
 
 </center>
