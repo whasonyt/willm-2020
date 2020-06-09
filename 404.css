@@ -1,0 +1,88 @@
+.no-signal-screen {
+	 background-image: linear-gradient(90deg, aqua 0%, aqua 6.5%, blue 6.5%, blue 13%, fuchsia 13%, fuchsia 19.5%, gray 19.5%, grey 26%, green 26%, green 32.5%, lime 32.5%, lime 39%, maroon 39%, maroon 45.5%, navy 45.5%, navy 52%, olive 52%, olive 58.5%, purple 58.5%, purple 65%, red 65%, red 71.5%, silver 71.5%, silver 78%, teal 78%, teal 84.5%, white 84.5%, white 91%, yellow 91%, yellow 97.5%, black 97.5%);
+	 width: 100vw;
+	 height: 100vh;
+	 display: flex;
+	 place-content: center;
+	 place-items: center;
+	 position: relative;
+}
+ .dissortion {
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+}
+ .dissortion:after, .dissortion:before {
+	 width: 100%;
+	 height: 100%;
+	 background-color: purple;
+	 content: '';
+	 position: absolute;
+	 filter: blur(500px);
+	 opacity: 0;
+	 animation-duration: 3s;
+	 animation-name: pulse;
+	 animation-iteration-count: infinite;
+}
+ .dissortion:before {
+	 background-color: lime;
+	 animation-delay: 3s;
+	 animation-duration: 6s;
+}
+ @keyframes pulse {
+	 from {
+		 opacity: 0;
+	}
+	 85% {
+		 opacity: 0;
+	}
+	 90% {
+		 opacity: 0.3;
+	}
+	 to {
+		 opacity: 0;
+	}
+}
+ .no-signal-screen__info {
+	 position: relative;
+	 margin: 0;
+	 padding: 10px;
+	 text-align: center;
+	 width: 40%;
+	 background-color: #fff;
+	 font-family: sans-serif;
+	 font-size: 3em;
+	 border-radius: 3px;
+	 box-shadow: 0 0 4px navy;
+	 overflow: hidden;
+}
+ .no-signal-screen__info:after {
+	 content: '';
+	 opacity: 0.3;
+	 top: 0;
+	 left: -100%;
+	 width: 200%;
+	 height: 100%;
+	 background: linear-gradient(15deg, red 0%, red 5%, transparent 5%, transparent 10%, red 10%, red 15%, transparent 15%, transparent 20%, red 20%, red 25%, transparent 25%, transparent 30%, red 30%, red 35%, transparent 35%, transparent 40%, red 40%, red 45%, transparent 45%, transparent 50%, red 50%, red 55%, transparent 55%, transparent 60%, red 60%, red 65%, transparent 65%, transparent 70%, red 70%, red 75%, transparent 75%, transparent 80%, red 80%, red 85%, transparent 85%, transparent 90%, red 90%, red 95%, transparent 95%, transparent 100%) repeat;
+	 position: absolute;
+	 animation-duration: 0.5s;
+	 animation-name: zebra;
+	 animation-iteration-count: infinite;
+}
+ @keyframes zebra {
+	 from {
+		 left: -100%;
+		 opacity: 0;
+	}
+	 20% {
+		 opacity: 0.3;
+	}
+	 40% {
+		 opacity: 0.3;
+	}
+	 to {
+		 left: 0;
+		 opacity: 0;
+	}
+}
+ 
