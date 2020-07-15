@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://www.google.com/recaptcha/api.js?render=6LchYK0UAAAAAMRflt6o0V_1imaH5KDnH5XVjWjB&onload=initRecaptcha&render=explicit"></script><script type="text/javascript">
-  var initRecaptcha = function() {
-    grecaptcha.ready(function() {
-      grecaptcha.execute("6LchYK0UAAAAAMRflt6o0V_1imaH5KDnH5XVjWjB", {action: "homepage"}).then(function(token) {
-        document.getElementById('recaptcha_token').value = token;
-      });
-    });
-  }
+  <script type="text/javascript">
+window['nitroAds'] = window['nitroAds'] || { createAd: function () { window.nitroAds.queue.push(["createAd", arguments]) }, queue: [] };
 </script>
+<script async src="https://s.nitropay.com/ads-463.js"></script>
   
   <link rel="icon" href="mr_quackers.png">
   <meta charset="utf-8">
@@ -51,7 +46,28 @@
 
       </div>
 </div>
+<div id="nitropay"></div>
 
+<script type="text/javascript">
+window['nitroAds'].createAd('nitropay', {
+  "refreshLimit": 10,
+  "refreshTime": 90,
+  "renderVisibleOnly": false,
+  "refreshVisibleOnly": true,
+  "sizes": [
+    [
+      "320",
+      "50"
+    ]
+  ],
+  "report": {
+    "enabled": true,
+    "wording": "Report Ad",
+    "position": "bottom-right"
+  },
+  "mediaQuery": "(min-width: 320px) and (max-width: 767px)"
+});
+</script>
   </section>
   <div class="hero-foot" id="footer-container">
 
