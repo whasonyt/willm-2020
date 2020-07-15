@@ -1,5 +1,11 @@
 <html>
 <head>
+  
+  <script type="text/javascript">
+window['nitroAds'] = window['nitroAds'] || { createAd: function () { window.nitroAds.queue.push(["createAd", arguments]) }, queue: [] };
+</script>
+<script async src="https://s.nitropay.com/ads-463.js"></script>
+  
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
 <link rel="icon" href="mr_quackers.png">
@@ -52,6 +58,28 @@ a {color: white}
 
   <a class="button blue" href="https://web.roblox.com/users/206664307/profile">Roblox</a>
   
+    <div id="nitropay"></div>
+
+<script type="text/javascript">
+window['nitroAds'].createAd('nitropay', {
+  "refreshLimit": 10,
+  "refreshTime": 90,
+  "renderVisibleOnly": false,
+  "refreshVisibleOnly": true,
+  "sizes": [
+    [
+      "320",
+      "50"
+    ]
+  ],
+  "report": {
+    "enabled": true,
+    "wording": "Report Ad",
+    "position": "bottom-right"
+  },
+  "mediaQuery": "(min-width: 320px) and (max-width: 767px)"
+});
+</script>
   </div></center>
 </body>
 </html>
