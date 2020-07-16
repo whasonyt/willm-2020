@@ -70,28 +70,6 @@
         <a href="contact.html"class="navbar-item">
           Contact
         </a>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    
-    <script>var fuckAdBlock = undefined;</script>
-    <script src="https://fuckadblock.sitexw.fr/fuckadblock.js"></script>
-    <script>
-        // We create the function that will be executed if AdBlock is detected
-        var adBlockDetected = function() {
-            alert('Hi! Could you please disable AdBlock? There\'s only a small banner ad at the bottom of this page.')
-        }
-        // We create the function that will be executed if AdBlock is NOT detected
-       
-        // We observe if the variable "fuckAdBlock" exists
-        if(typeof  FuckAdBlock === 'undefined') {
-            // If it does not exist, it means that AdBlock blocking the script FuckAdBlock
-            // Therefore the function "adBlockDetected" is executed
-            // PS: The function is executed on the "document ready" in order to select the HTML with jQuery
-            $(document).ready(adBlockDetected);
-        } else {
-            // Otherwise, our functions we add to FuckAdBlock for a classic detection
-            fuckAdBlock.on(true, adBlockDetected).on(false, adBlockUndetected);
-        }
-    </script>
       </div>
     </div>
   </div>
