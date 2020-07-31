@@ -1,0 +1,2 @@
+- Verifii Discord Bot Privacy Policy -
+We don't collect any information besides the stuff you give us. We store it but you can always request for it to be deleted on our support server. The only information we store automatically is your server ID - you give us the rest. (gimme!settings and gimme!setup)
