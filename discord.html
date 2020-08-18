@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript">
+window['nitroAds'] = window['nitroAds'] || { createAd: function () { window.nitroAds.queue.push(["createAd", arguments]) }, queue: [] };
+</script>
+<script async src="https://s.nitropay.com/ads-463.js"></script>
+  
+  <link rel="icon" href="mr_quackers.png">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Will M</title>
+  <link rel="stylesheet" href="//willm.xyz/assets/css/font-awesome.min.css"  />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+  <!-- Bulma Version 0.6.0 -->
+    <link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/a1df3e70a9c91ae88dc3ad13ead6a92709bed058/css/bulma/bulma-theme.css'/>
+  <style type="text/css">
+    html,body {
+      font-family: 'Open Sans';
+    }
+    .control { border-radius: 0px !important }
+    .clear { background-color: #e80e07 !important }
+    .sub { background-color: #00d404 !important }
+    .is-expanded { border-radius: 0px !important }
+  </style>
+</head>
+<body>
+  <div class="hero-head" id="navbar-container">
+
+  </div>
+  <section class="section is-fullheight is-default is-bold ">
+
+<div class="container is-fluid">
+ <section class="section">
+        <div class="container">
+          <h1 class="title has-text-centered">Contact Me</h1>
+          
+
+            <h3>Discord Staff</h3>
+<span id="staff"></span>
+<h3>Discord Boosters</h3>
+          <span id="boost"></span>
+        </div>
+      </section>
+
+      </div>
+</div>
+<div id="nitropay"></div>
+
+<script type="text/javascript">
+window['nitroAds'].createAd('nitropay', {
+  "refreshLimit": 10,
+  "refreshTime": 90,
+  "renderVisibleOnly": false,
+  "refreshVisibleOnly": true,
+  "sizes": [
+    [
+      "320",
+      "50"
+    ]
+  ],
+  "report": {
+    "enabled": true,
+    "wording": "Report Ad",
+    "position": "bottom-right"
+  },
+  "mediaQuery": "(min-width: 320px) and (max-width: 767px)"
+});
+</script>
+  </section>
+  <div class="hero-foot" id="footer-container">
+
+  </div>
+  <script src="assets/js/jquery-3.2.1.min.js" charset="utf-8"></script>
+  <script src="assets/js/bulma.js" charset="utf-8"></script>
+  <script src="assets/js/main.js" charset="utf-8"></script>
+  <script src="assets/js/videos.js" charset="utf-8"></script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+window.fetch('https://bruhapi.xyz/rolecount').then(r => r.json().then(c => document.querySelector('#staff').innerHTML = c.staff))
+window.fetch('https://bruhapi.xyz/rolecount').then(r => r.json().then(c => document.querySelector('#boost').innerHTML = c.boost))
+</script>
+</html>
