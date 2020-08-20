@@ -91,6 +91,6 @@ window['nitroAds'].createAd('nitropay', {
 window.fetch('https://bruhapi.xyz/rolecount').then(r => r.json().then(c => document.querySelector('#staff').innerHTML = c.staff))
 window.fetch('https://bruhapi.xyz/rolecount').then(r => r.json().then(c => document.querySelector('#boost').innerHTML = c.boost))
   window.fetch('https://bruhapi.xyz/rolecount').then(r => r.json().then(c => document.querySelector('#count').innerHTML = c.count))
-  window.fetch('https://discordapp.com/api/guilds/339188357253038092/widget.json').then(r => r.json().then(c => document.querySelector('#online').innerHTML = c.presence_count))
+  window.fetch('https://discordapp.com/api/guilds/339188357253038092/widget.json').then(r => r.json().then(c => document.querySelector('#online').innerHTML = " (" + c.presence_count + " Online)"))
 </script>
 </html>
