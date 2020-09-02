@@ -48,11 +48,11 @@ window['nitroAds'] = window['nitroAds'] || { createAd: function () { window.nitr
          
      <h1 style="font-size: 50px" class="title has-text-centered"><img class="server-icon" src="https://cdn.discordapp.com/icons/339188357253038092/e16612ed99792901ca217628cd145a67.webp"></img> Will's World</h1>
        
-  <h1 style="font-size: 24px !important; margin: 5px !important" class="title has-text-centered"><img src="https://discordia.me/uploads/badges/staff_badge.png" width="24px"> Discord Mods</h1>
+  <h1 style="font-size: 24px !important; margin: 5px !important" class="title has-text-centered"><img src="https://discordia.me/uploads/badges/staff_badge.png" width="24px"> Discord Mods <span id="scount">...</span></h1>
           <div style="text-align: center" id="staff">Loading...</div><br>
           
           
-<h1 style="font-size: 24px !important; margin: 5px !important" class="title has-text-centered"><svg class="icon-360yEu" aria-hidden="false" width="24" height="24" viewBox="0 0 8 12"><path d="M4 0L0 4V8L4 12L8 8V4L4 0ZM7 7.59L4 10.59L1 7.59V4.41L4 1.41L7 4.41V7.59Z" fill="#7289DA"></path><path d="M2 4.83V7.17L4 9.17L6 7.17V4.83L4 2.83L2 4.83Z" fill="#7289DA"></path></svg>Discord Boosters <span id="count">...</span></h1>
+<h1 style="font-size: 24px !important; margin: 5px !important" class="title has-text-centered"><svg class="icon-360yEu" aria-hidden="false" width="24" height="24" viewBox="0 0 8 12"><path d="M4 0L0 4V8L4 12L8 8V4L4 0ZM7 7.59L4 10.59L1 7.59V4.41L4 1.41L7 4.41V7.59Z" fill="#7289DA"></path><path d="M2 4.83V7.17L4 9.17L6 7.17V4.83L4 2.83L2 4.83Z" fill="#7289DA"></path></svg>Discord Boosters <span id="bcount">...</span></h1>
           <div style="text-align: center" id="boost">Loading...</div>
          <hr>
          <a href="https://discord.gg/DvXWrqb"><button style="background-color: #7289DA" class="button is-dark is-fullwidth"><span id="online">Join Discord Server</span></button></a>    
@@ -101,9 +101,14 @@ window['nitroAds'].createAd('nitropay', {
 
 
 <script>
-window.fetch('https://bruhapi.xyz/rolecount').then(r => r.json().then(c => document.querySelector('#staff').innerHTML = c.staff))
+window.fetch('https://bruhapi.xyz/rolecount').then(r => r.json().then(c => document.querySelector('#staff').innerHTML = c.staff));
 window.fetch('https://bruhapi.xyz/rolecount').then(r => r.json().then(c => document.querySelector('#boost').innerHTML = c.boost))
-  window.fetch('https://bruhapi.xyz/rolecount').then(r => r.json().then(c => document.querySelector('#count').innerHTML = c.count))
-  window.fetch('https://discordapp.com/api/guilds/339188357253038092/widget.json').then(r => r.json().then(c => document.querySelector('#online').innerHTML = "Join Discord Server (" + c.presence_count + " Online)"))
+  window.fetch('https://bruhapi.xyz/rolecount').then(r => r.json().then(c => document.querySelector('#bcount').innerHTML = c.boostcount));
+   window.fetch('https://bruhapi.xyz/rolecount').then(r => r.json().then(c => document.querySelector('#scount').innerHTML = c.staffcount));
+   
+  
+  
+  window.fetch('https://discordapp.com/api/guilds/339188357253038092/widget.json').then(r => r.json().then(c => document.querySelector('#online').innerHTML = "Join Discord Server (" + c.presence_count + " Online)"));
+
 </script>
 </html>
