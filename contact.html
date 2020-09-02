@@ -43,7 +43,7 @@ window['nitroAds'] = window['nitroAds'] || { createAd: function () { window.nitr
         <div class="field">
             <label for="name" class="label is-size-4 has-text-weight-light"></label>
             <div class="control has-icons-left">
-                <input type="text" name="name" id="name" class="input" placeholder="Name" autofocus required>
+                <input type="text" name="name" id="name" class="input" placeholder="Name" autofocus required maxlength="100">
                     <span class="icon is-left"> 
                         <i class="fa fa-user"></i>
                     </span>
@@ -52,7 +52,7 @@ window['nitroAds'] = window['nitroAds'] || { createAd: function () { window.nitr
         <div class="field">
             <label for="email" class="label is-size-4 has-text-weight-light"></label>
             <div class="control has-icons-left">
-                <input type="email" name="email" id="email" class="input" placeholder="Email" required>
+                <input type="email" name="email" id="email" class="input" placeholder="Email" required maxlength="100">
                     <span class="icon is-left">
                         <i class="fa fa-envelope"></i>
                     </span>
@@ -60,7 +60,7 @@ window['nitroAds'] = window['nitroAds'] || { createAd: function () { window.nitr
         </div>
         <div class="field">
             <label for="message" class="label is-size-4 has-text-weight-light"></label>
-            <textarea name="message" id="message" rows="3" class="textarea is-medium" placeholder="Message" required></textarea>
+            <textarea name="message" id="message" rows="3" class="textarea is-medium" placeholder="Message" required maxlength="1500"></textarea>
         </div><center>
         <button type="submit" class="button is-success is-size-5">Submit</button>
       </center>
