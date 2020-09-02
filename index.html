@@ -99,9 +99,18 @@ window['nitroAds'].createAd('nitropay', {
   <script src="assets/js/jquery-3.2.1.min.js" charset="utf-8"></script>
   <script src="assets/js/bulma.js" charset="utf-8"></script>
   <script src="assets/js/main.js" charset="utf-8"></script>
-  <script>const urlParams = new URLSearchParams(window.location.search);
+
+<!-- Contact Form Alert -->
+<script>
+const urlParams = new URLSearchParams(window.location.search);
 const myParam = urlParams.get('alert');
-  if(myParam === "yes") {alert('Contact form successfully submitted!')}</script>
+  const name = urlParams.get('name');
+  if(myParam === "one") {
+alert('Thanks, ' + name + '! The contact form was successfully submitted!')
+} else  if(myParam === "two") {
+alert('You already submitted a contact form a few minutes ago! Try again later.')
+}
+</script>
   
 </body>
 </html>
