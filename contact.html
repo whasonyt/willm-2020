@@ -14,8 +14,11 @@ window['nitroAds'] = window['nitroAds'] || { createAd: function () { window.nitr
   <link rel="stylesheet" href="//willm.xyz/assets/css/font-awesome.min.css"  />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
-  <!-- Bulma Version 0.6.0 -->
-    <link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/a1df3e70a9c91ae88dc3ad13ead6a92709bed058/css/bulma/bulma-theme.css'/>
+  <!-- Bulma Version 0.6.0
+    <link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/a1df3e70a9c91ae88dc3ad13ead6a92709bed058/css/bulma/bulma-theme.css'/>-->
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css"/>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css'/>
   <style type="text/css">
     html,body {
       font-family: 'Open Sans';
@@ -36,10 +39,32 @@ window['nitroAds'] = window['nitroAds'] || { createAd: function () { window.nitr
  <section class="section">
         <div class="container">
           <h1 class="title has-text-centered">Contact Me</h1>
-          
-
-            Due to spam, I disabled the contact form for now! You can reach me via email at <a href="mailto:hi@willm.xyz">hi@willm.xyz</a> or on <a href="https://instagram.com/will.mccrudden">Instagram</a>/<a href="https://twitter.com/willmccrudden">Twitter</a>. The best way to get in touch is probably on my <a href="/dis">Discord</a> server.
-            
+          <form action="#" method="post">
+        <div class="field">
+            <label for="name" class="label is-size-4 has-text-weight-light"></label>
+            <div class="control has-icons-left">
+                <input type="text" name="name" id="name" class="input" placeholder="Name" autofocus>
+                    <span class="icon is-left"> 
+                        <i class="fa fa-user"></i>
+                    </span>
+            </div>
+        </div>
+        <div class="field">
+            <label for="email" class="label is-size-4 has-text-weight-light"></label>
+            <div class="control has-icons-left">
+                <input type="email" name="email" id="email" class="input" placeholder="Email" required>
+                    <span class="icon is-left">
+                        <i class="fa fa-envelope"></i>
+                    </span>
+            </div>
+        </div>
+        <div class="field">
+            <label for="message" class="label is-size-4 has-text-weight-light"></label>
+            <textarea name="message" id="message" rows="3" class="textarea is-medium" placeholder="Message" required></textarea>
+        </div><center>
+        <button type="submit" class="button is-success is-size-5">Submit</button>
+      </center>
+    </form>
           
         </div>
       </section>
