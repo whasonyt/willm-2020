@@ -1,2 +1,5 @@
 - Verifii Discord Bot Privacy Policy -
-We automatically store the guild ID and users can submit a verify channel, custom prefix, and a unverified role. For all of these, we only store the object names. If you'd like to request deletion, join our support server (willm.xyz/discord) or email verifii@willm.xyz with your Guild ID and why you want your information deleted from Verifii.
+We automatically store the guild ID and users can submit a verify channel, custom prefix, and a unverified role. For all of these, we only store the object names. 
+
+
+If you'd like to request deletion, join our support server (willm.xyz/discord) or email verifii@willm.xyz with your Guild ID and why you want your information deleted from Verifii.
