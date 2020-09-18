@@ -1,6 +1,7 @@
 # WELCOME TO HOTFRONT!
 HotFront provides a static, hyper text mark up language (HTML) page host available at https://hotfronthost.com.
 
+HotFront privacy policy was last updated **September 18th, 2020**.
 ## INFORMATION WE COLLECT
 We only collect and store the information you give us. We do not collect and store any information automatically. Advertisement placements/partners may collect and store information, please read their policies. This privacy policy only applies to HotFront as a service.
 
