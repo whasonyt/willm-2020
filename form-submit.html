@@ -1,0 +1,12 @@
+<title>Contact Form</title>
+<!-- Contact Form Alert -->
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+const myParam = urlParams.get('alert');
+  const name = urlParams.get('name');
+  if(myParam === "one") {
+alert('Thanks, ' + name + '! The contact form was successfully submitted! You can now close this window.')
+} else  if(myParam === "two") {
+alert('You already submitted a contact form a few minutes ago! Close this window and try again later.')
+}
+</script>
